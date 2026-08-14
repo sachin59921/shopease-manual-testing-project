@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - Demo Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="brand">
+            ShopEase
+        </div>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#login">Login</a>
+
+            <button id="cartBtn" class="cart-button">
+                🛒 Cart (<span id="cartCount">0</span>)
+            </button>
+        </nav>
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <h1>Simple Shopping. Better Testing.</h1>
+
+            <p>
+                A demo e-commerce application created for
+                manual QA testing practice.
+            </p>
+
+            <a href="#products" class="primary-button">
+                Shop Now
+            </a>
+        </section>
+
+
+        <!-- Login Section -->
+        <section id="login" class="panel">
+
+            <h2>Login</h2>
+
+            <form id="loginForm">
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="qa@example.com"
+                >
+
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    id="password"
+                    type="password"
+                    placeholder="Password"
+                >
+
+
+                <button
+                    type="submit"
+                    class="primary-button"
+                >
+                    Login
+                </button>
+
+                <p
+                    id="loginMsg"
+                    class="message"
+                ></p>
+
+            </form>
+
+            <small>
+                Demo credentials:
+                <strong>qa@example.com</strong> /
+                <strong>Test@123</strong>
+            </small>
+
+        </section>
+
+
+        <!-- Products Section -->
+        <section id="products">
+
+            <div class="section-header">
+
+                <h2>Products</h2>
+
+                <input
+                    id="search"
+                    type="text"
+                    placeholder="Search products..."
+                >
+
+            </div>
+
+
+            <div
+                id="productGrid"
+                class="product-grid"
+            ></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Cart Sidebar -->
+    <aside
+        id="cartPanel"
+        class="cart-panel"
+    >
+
+        <button
+            id="closeCart"
+            class="close-button"
+        >
+            ×
+        </button>
+
+        <h2>Your Cart</h2>
+
+        <div id="cartItems">
+        </div>
+
+        <div class="cart-total">
+            Total:
+            ₹<span id="cartTotal">0</span>
+        </div>
+
+        <button
+            id="checkout"
+            class="primary-button full-width"
+        >
+            Checkout
+        </button>
+
+        <p
+            id="checkoutMsg"
+            class="message"
+        ></p>
+
+    </aside>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
