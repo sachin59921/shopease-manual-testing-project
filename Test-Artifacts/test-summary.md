@@ -1,4 +1,3 @@
-```markdown
 # ShopEase – Test Summary Report
 
 ## 1. Document Information
@@ -11,6 +10,12 @@
 | Tester | Sachin Kumar Pal |
 | Testing Type | Manual Testing |
 | Total Test Cases | 30 |
+| Executed Test Cases | 30 |
+| Passed | 27 |
+| Failed | 3 |
+| Blocked | 0 |
+| Not Executed | 0 |
+| Total Defects | 3 |
 | Execution Status | Completed |
 
 ---
@@ -19,26 +24,34 @@
 
 Manual testing was performed on the ShopEase demo e-commerce web application.
 
-A total of **30 test cases** were designed and executed covering:
+A total of **30 test cases** were designed and executed to validate the application's major functional and non-functional areas.
+
+The testing covered:
 
 - Login
+- Login Validation
 - Product Listing
 - Product Search
 - Shopping Cart
-- Cart Quantity
+- Cart Quantity Management
 - Cart Calculation
 - Checkout
 - Navigation
 - Responsive UI
 - Cross-Browser Compatibility
 
-Out of 30 executed test cases:
+### Overall Result
+
+Out of **30 executed test cases**:
 
 - **27 test cases passed**
 - **3 test cases failed**
 - **0 test cases were blocked**
+- **0 test cases remained unexecuted**
 
-The overall test pass percentage was **90%**.
+The overall **test pass rate was 90%**.
+
+Three defects were identified during testing and documented in `bug-report.md`.
 
 ---
 
@@ -52,11 +65,14 @@ The overall test pass percentage was **90%**.
 | Not Executed | 0 | 0% |
 | **Total** | **30** | **100%** |
 
-### Pass Rate
+---
+
+## 3.1 Pass Rate
 
 ```text
-Pass Rate = (Passed Test Cases / Total Test Cases) × 100
+Pass Rate
+= (Passed Test Cases / Executed Test Cases) × 100
 
-Pass Rate = (27 / 30) × 100
+= (27 / 30) × 100
 
-Pass Rate = 90%
+= 90%
