@@ -1,55 +1,75 @@
-
----
-```markdown
 # ShopEase – Bug Report
 
-## 1. Document Information
+## Project Information
 
 | Field | Details |
 |---|---|
-| Project | ShopEase – Demo E-commerce Application |
+| Project Name | ShopEase – Demo E-commerce Application |
 | Document | Bug Report |
 | Version | 1.0 |
-| Tester | Sachin Kumar Pal |
+| Tested By | Sachin Kumar Pal |
+| Testing Type | Manual Testing |
+| Environment | Windows 11 |
+| Browser | Google Chrome, Microsoft Edge, Mozilla Firefox |
+| Total Test Cases | 30 |
+| Failed Test Cases | 3 |
 | Total Defects | 3 |
-| Status | Open |
 
 ---
 
-# BUG-001 – Negative Quantity Accepted in Cart
+# Bug Summary
+
+| Bug ID | Test Case ID | Module | Bug Title | Severity | Priority | Status |
+|---|---|---|---|---|---|---|
+| BUG-001 | TC-020 | Shopping Cart | Negative quantity is accepted | High | P1 | Open |
+| BUG-002 | TC-029 | Responsive UI | Horizontal scrolling on mobile Products section | Medium | P2 | Open |
+| BUG-003 | TC-030 | Cross-Browser | UI alignment issue in Firefox | Low | P3 | Open |
+
+---
+
+# BUG-001 – Negative Quantity Accepted
+
+## Bug Information
 
 | Field | Details |
 |---|---|
 | Bug ID | BUG-001 |
 | Test Case ID | TC-020 |
 | Module | Shopping Cart |
-| Title | Negative quantity is accepted |
 | Severity | High |
 | Priority | P1 |
 | Status | Open |
-| Environment | Windows 11 / Google Chrome |
+| Environment | Windows 11 |
+| Browser | Google Chrome |
+| Reported By | Sachin Kumar Pal |
 
-### Description
+## Title
 
-The Cart quantity field allows the user to enter a negative quantity such as `-1`.
+**Negative product quantity is accepted in the Shopping Cart.**
 
-Negative product quantities should not be accepted because they can result in an invalid cart state and incorrect calculations.
+## Description
 
-### Preconditions
+The Shopping Cart allows users to enter a negative quantity such as `-1`.
 
-- Application is accessible.
-- A product has been added to the Cart.
+A negative quantity should not be accepted because it can result in an invalid cart state and incorrect calculations.
 
-### Steps to Reproduce
+## Preconditions
 
-1. Open ShopEase.
-2. Add Wireless Mouse to Cart.
-3. Open Cart.
-4. Locate the quantity field.
-5. Enter `-1`.
-6. Observe the Cart.
+- ShopEase application is accessible.
+- Product is available.
+- Product has been added to the Cart.
 
-### Test Data
+## Steps to Reproduce
+
+1. Open the ShopEase application.
+2. Navigate to the Products section.
+3. Add **Wireless Mouse** to the Cart.
+4. Open the Shopping Cart.
+5. Locate the quantity field.
+6. Enter `-1`.
+7. Observe the Cart.
+
+## Test Data
 
 ```text
 Product: Wireless Mouse
