@@ -1,8 +1,3 @@
-
----
-
-# 5. `test-summary.md`
-
 ```markdown
 # ShopEase – Test Summary Report
 
