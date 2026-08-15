@@ -1,141 +1,56 @@
+
+---
+```markdown
 # ShopEase – Bug Report
 
-## BUG-001 – Login accepts invalid password
+## 1. Document Information
+
+| Field | Details |
+|---|---|
+| Project | ShopEase – Demo E-commerce Application |
+| Document | Bug Report |
+| Version | 1.0 |
+| Tester | Sachin Kumar Pal |
+| Total Defects | 3 |
+| Status | Open |
+
+---
+
+# BUG-001 – Negative Quantity Accepted in Cart
 
 | Field | Details |
 |---|---|
 | Bug ID | BUG-001 |
-| Module | Login |
+| Test Case ID | TC-020 |
+| Module | Shopping Cart |
+| Title | Negative quantity is accepted |
 | Severity | High |
 | Priority | P1 |
 | Status | Open |
-| Environment | Windows 11 / Chrome |
+| Environment | Windows 11 / Google Chrome |
 
-### Summary
+### Description
 
-Login succeeds when a valid email is combined with an incorrect password.
+The Cart quantity field allows the user to enter a negative quantity such as `-1`.
 
-### Steps to Reproduce
+Negative product quantities should not be accepted because they can result in an invalid cart state and incorrect calculations.
 
-1. Open Login section.
-2. Enter `qa@example.com`.
-3. Enter `Wrong@123`.
-4. Click **Login**.
+### Preconditions
 
-### Expected Result
-
-Login should fail and an invalid credentials message should be displayed.
-
-### Actual Result
-
-Application displays **Login successful** even though the password is incorrect.
-
----
-
-## BUG-002 – Login accepts invalid email
-
-| Field | Details |
-|---|---|
-| Bug ID | BUG-002 |
-| Module | Login |
-| Severity | High |
-| Priority | P1 |
-| Status | Open |
-| Environment | Windows 11 / Chrome |
+- Application is accessible.
+- A product has been added to the Cart.
 
 ### Steps to Reproduce
 
-1. Open Login section.
-2. Enter `invalid@example.com`.
-3. Enter `Test@123`.
-4. Click **Login**.
+1. Open ShopEase.
+2. Add Wireless Mouse to Cart.
+3. Open Cart.
+4. Locate the quantity field.
+5. Enter `-1`.
+6. Observe the Cart.
 
-### Expected Result
+### Test Data
 
-Invalid email should be rejected.
-
-### Actual Result
-
-Application allows login when an invalid email is entered.
-
----
-
-## BUG-003 – Cart accepts quantity zero
-
-| Field | Details |
-|---|---|
-| Bug ID | BUG-003 |
-| Module | Cart |
-| Severity | Medium |
-| Priority | P2 |
-| Status | Open |
-| Environment | Windows 11 / Chrome |
-
-### Steps to Reproduce
-
-1. Add Wireless Mouse to cart.
-2. Open Cart.
-3. Change quantity to `0`.
-
-### Expected Result
-
-Product should be removed or appropriate validation should be displayed.
-
-### Actual Result
-
-Product remains in the cart with quantity `0`.
-
----
-
-## BUG-004 – Incorrect cart total for invalid quantity
-
-| Field | Details |
-|---|---|
-| Bug ID | BUG-004 |
-| Module | Cart |
-| Severity | High |
-| Priority | P1 |
-| Status | Open |
-| Environment | Windows 11 / Chrome |
-
-### Steps to Reproduce
-
-1. Add a product to cart.
-2. Open Cart.
-3. Enter an invalid/negative quantity where permitted.
-4. Observe the total.
-
-### Expected Result
-
-Cart total should never become invalid or negative.
-
-### Actual Result
-
-Cart total may become incorrect depending on the entered quantity.
-
----
-
-## BUG-005 – No clear validation message for zero quantity
-
-| Field | Details |
-|---|---|
-| Bug ID | BUG-005 |
-| Module | Cart |
-| Severity | Low |
-| Priority | P3 |
-| Status | Open |
-| Environment | Windows 11 / Chrome |
-
-### Steps to Reproduce
-
-1. Add product to cart.
-2. Open Cart.
-3. Set quantity to `0`.
-
-### Expected Result
-
-Clear validation or removal behavior should be provided.
-
-### Actual Result
-
-No clear validation message is displayed.
+```text
+Product: Wireless Mouse
+Quantity: -1
